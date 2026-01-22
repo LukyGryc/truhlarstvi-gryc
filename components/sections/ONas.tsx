@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ONas = () => {
   return (
-    <section className="bg-gold w-screen h-screen  px-8 py-20 lg:py-30 flex flex-col md:flex-row justify-between gap-6 md:gap-8">
+    <section className="bg-gold w-full min-h-screen px-8 py-20 lg:py-[7.5rem] flex flex-col md:flex-row justify-between gap-6 md:gap-8">
       <div className="w-full md:w-1/2">
         <h1 className="section-header">Vítáme Vás na naších stránkách.</h1>
         <p className="section-paragraph">Jsme součástí zavedené firny, která se od roku 2000 zabývá rekonstrukcí bytových jader, rekonstrukcí bytů a domů. Od roku 2018 jsme rozšířili naši nabídku o truhlářské služby.</p>
