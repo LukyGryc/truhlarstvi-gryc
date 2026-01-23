@@ -15,7 +15,7 @@ const ONas = () => {
           <div>
             <h2 className="text-2xl font-semibold text-gray-100 mb-4">Tradice a Kvalita</h2>
             <p className="text-gray-300 mb-4">
-              Jsme součástí zavedené firny, která se od roku 2000 zabývá rekonstrukcí bytových jader, rekonstrukcí bytů a domů. Od roku 2018 jsme rozšířili naši nabídku o truhlářské služby.
+              Jsme součástí zavedené firmy, která se od roku 2000 zabývá rekonstrukcí bytových jader, rekonstrukcí bytů a domů. Od roku 2018 jsme rozšířili naši nabídku o truhlářské služby.
             </p>
             <p className="text-gray-300">
               Hlavní specializací truhlářské dílny je zakázková výroba kuchyní, koupelnového nábytku, vestavěných skříní, vybavení kanceláří a jiného nábytku z lamina. Dále poskytujeme služby nejen domácím kutilům a to možnost nechat si u nás zadat výrobu nařezání a olepení dílců z lamino desek.
