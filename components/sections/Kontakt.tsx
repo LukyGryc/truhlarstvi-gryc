@@ -40,7 +40,7 @@ const ContactItems: ContactItem[] = [
 const Kontakt = () => {
 
   return (
-    <section id="kontakt" className="relative bg-[url(/wooden-texture.jpg)] bg-cover bg-center min-h-screen text-white">
+    <section id="kontakt" className="relative bg-[url(/wooden-texture.jpg)] bg-cover bg-center min-h-200 text-white">
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-transparent" />
       
