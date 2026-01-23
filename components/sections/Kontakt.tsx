@@ -44,7 +44,8 @@ const Kontakt = () => {
     <section id="kontakt" className="relative min-h-200 text-white">
       <Image
         src="/wooden-texture.jpg"
-        alt="Dřevěná textura pozadí"
+        alt=""
+        aria-hidden="true"
         fill
         className="object-cover"
         quality={75}
