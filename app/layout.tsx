@@ -58,52 +58,46 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://www.reol-ct.cz/",
-  name: "Truhlářství Gryč",
-  description: "Kvalitní truhlářské práce, kuchyně na míru, nábytek a formátování desek",
-  url: "https://www.reol-ct.cz/",
-  telephone: "+420737188160",
-  email: "info@reol-ct.cz",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "ul. Jablunkovská 30",
-    addressLocality: "Český Těšín",
-    postalCode: "73701",
-    addressCountry: "CZ",
-  },
-  areaServed: [
-    { "@type": "City", name: "Český Těšín" },
-    { "@type": "City", name: "Třinec" },
-  ],
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "09:00",
-    closes: "14:00",
-  },
-  sameAs: "https://www.facebook.com/people/Stola%C5%99stv%C3%AD-Gry%C4%8D/61576758120241",
-};
 
-const jsonLdString = JSON.stringify(jsonLd).replace(/</g, "\\u003c");
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.reol-ct.cz/",
+    name: "Truhlářství Gryč",
+    description: "Kvalitní truhlářské práce, kuchyně na míru, nábytek a formátování desek",
+    url: "https://www.reol-ct.cz/",
+    telephone: "+420737188160",
+    email: "info@reol-ct.cz",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "ul. Jablunkovská 30",
+      addressLocality: "Český Těšín",
+      postalCode: "73701",
+      addressCountry: "CZ",
+    },
+    areaServed: [
+      { "@type": "City", name: "Český Těšín" },
+      { "@type": "City", name: "Třinec" },
+    ],
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "14:00",
+    },
+    sameAs: "https://www.facebook.com/people/Stola%C5%99stv%C3%AD-Gry%C4%8D/61576758120241",
+  };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const jsonLdString = JSON.stringify(jsonLd).replace(/</g, "\\u003c");
+
   return (
     <html lang="cs">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: jsonLdString,
+            __html: jsonLdString
           }}
-        />
-      </head>
-    </html>
-  );
-}
         />
       </head>
       <body
