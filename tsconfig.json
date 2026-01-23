@@ -20,7 +20,9 @@
     ],
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
   },
   "include": [
     "next-env.d.ts",
@@ -30,11 +32,4 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules"],
-  "strict": true,
-  "noImplicitAny": true,
-  "strictNullChecks": true,
-  "strictFunctionTypes": true,
-  "noUnusedLocals": true,
-  "noUnusedParameters": true
 }

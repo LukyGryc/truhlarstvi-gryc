@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 const Navbar = () => {
   return (
     <header className="fixed top-0 z-50 flex justify-between w-full px-4 md:px-12 lg:px-60 py-3 md:py-4 bg-white/30 text-black backdrop-blur-md items-center">
