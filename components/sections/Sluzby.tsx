@@ -45,10 +45,7 @@ const Sluzby = () => {
           </p>
         </div>
 
-        {/* Content */}
-        <div className="grid md:grid-cols-2 gap-12 mb-20">
-          <Columns columns={columns} />
-        </div>
+        <Columns columns={columns} />
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

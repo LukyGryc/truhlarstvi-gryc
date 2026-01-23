@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  truhlarstvi-gryc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: truhlarstvi-gryc
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    # Uncomment if you need to add environment variables
+    # env_file:
+    #   - .env.production

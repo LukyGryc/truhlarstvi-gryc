@@ -1,3 +1,13 @@
+import { NavLinkType } from "@/types/layout"
+import NavLink from "./NavLink"
+
+const links: NavLinkType[] = [
+  { id: "onas", href: '#onas', label: 'O nás' },
+  { id: "sluzby", href: '#sluzby', label: 'Služby' },
+  { id: "galerie", href: '#galerie', label: 'Galerie' },
+  { id: "kontakt", href: '#kontakt', label: 'Kontakt' }
+]
+
 const Navbar = () => {
   return (
     <header className="fixed top-0 z-50 flex justify-between w-full px-4 md:px-12 lg:px-60 py-3 md:py-4 bg-white/30 text-black backdrop-blur-md items-center">
@@ -8,10 +18,11 @@ const Navbar = () => {
       </h1>
 
       <nav className="flex gap-4">
-        <a href="#onas" className="focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1 transition-colors hover:text-blue-600">O nás</a>
-        <a href="#sluzby" className="focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1 transition-colors hover:text-blue-600">Služby</a>
-        <a href="#galerie" className="focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1 transition-colors hover:text-blue-600">Galerie</a>
-        <a href="#kontakt" className="focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1 transition-colors hover:text-blue-600">Kontakt</a>
+        {
+          links.map(({ id, href, label }) => (
+            <NavLink key={id} href={href} label={label} />
+          ))
+        }
       </nav>
     </header>
   )
