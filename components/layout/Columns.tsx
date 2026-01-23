@@ -1,4 +1,6 @@
+'use client';
 import { ColumnType } from "@/types/layout";
+import { motion } from "motion/react";
 import { JSX } from "react";
 
 interface Props {
@@ -6,7 +8,13 @@ interface Props {
 }
 
 const Columns: React.FC<Props> = ({ columns }): JSX.Element => (
-    <>
+    <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        viewport={{ once: true, amount: 0.5 }}
+        className="grid mb-10 md:grid-cols-2 gap-12 md:gap-16"
+    >
         {
             columns.map(({ id, paragraphs, title }) => (
                 <div key={id}>
@@ -23,7 +31,7 @@ const Columns: React.FC<Props> = ({ columns }): JSX.Element => (
                 </div>
             ))
         }
-    </>
+    </motion.div>
 )
 
 export default Columns;

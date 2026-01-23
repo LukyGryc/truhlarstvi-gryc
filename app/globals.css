@@ -46,6 +46,10 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .header-underline{
   @apply w-16 h-1 bg-gray-600;
 }

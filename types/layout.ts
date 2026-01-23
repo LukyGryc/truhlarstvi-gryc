@@ -8,8 +8,9 @@ export interface ColumnType {
 
 export interface StatType {
   id: string;
-  value: string;
+  value: number;
   description: string;
+  type: "+" | "%";
 }
 
 export interface ContactItem{
@@ -23,4 +24,10 @@ export interface ContactItem{
 export interface Card {
   title: string;
   description: string;
+}
+
+export interface NavLinkType {
+  id: string;
+  href: string;
+  label: string;
 }

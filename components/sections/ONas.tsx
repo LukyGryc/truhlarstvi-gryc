@@ -1,5 +1,5 @@
 import Columns from "../layout/Columns";
-import Stat from "../layout/Stat";
+import StatCard from "../layout/StatCard";
 import SectionTitle from "../layout/SectionTitle";
 import { ColumnType, StatType } from "@/types/layout";
 
@@ -24,9 +24,9 @@ export const columns: ColumnType[] = [
 ]
 
 export const stats: StatType[] = [
-  { id: "experience", value: "25+", description: "Let Zkušeností" },
-  { id: "projects", value: "500+", description: "Realizovaných Projektů" },
-  { id: "satisfaction", value: "100%", description: "Spokojenost" }
+  { id: "experience", value: 25, description: "Let Zkušeností", type: "+" },
+  { id: "projects", value: 150, description: "Realizovaných Projektů", type: "+" },
+  { id: "satisfaction", value: 100, description: "Spokojenost", type: "%" }
 ]
 
 const ONas = () => {
@@ -38,14 +38,11 @@ const ONas = () => {
         {/* Header */}
         <SectionTitle title="O nás" />
 
-        {/* Grid */}
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16">
-          <Columns columns={columns} />
-        </div>
+        <Columns columns={columns} />
 
         {/* Stats */}
         <div className="mt-20 grid grid-cols-3 gap-6 md:gap-10">
-          <Stat stats={stats} />
+          <StatCard stats={stats} />
         </div>
       </div>
 
