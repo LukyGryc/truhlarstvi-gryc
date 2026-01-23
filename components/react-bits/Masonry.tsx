@@ -46,14 +46,13 @@ const preloadImages = async (urls: string[]): Promise<void> => {
   );
 };
 
-interface Item {
+export interface MasonryItem {
   id: string;
   img: string;
-  url: string;
   height: number;
 }
 
-interface GridItem extends Item {
+interface GridItem extends MasonryItem {
   x: number;
   y: number;
   w: number;
@@ -61,7 +60,7 @@ interface GridItem extends Item {
 }
 
 interface MasonryProps {
-  items: Item[];
+  items: MasonryItem[];
   ease?: string;
   duration?: number;
   stagger?: number;
@@ -84,8 +83,8 @@ const Masonry: React.FC<MasonryProps> = ({
   colorShiftOnHover = false
 }) => {
   const columns = useMedia(
-    ['(min-width:1500px)', '(min-width:1000px)', '(min-width:600px)', '(min-width:400px)'],
-    [5, 4, 3, 2],
+    ['(min-width:1500px)', '(min-width:1000px)', '(min-width:768px)', '(min-width:640px)'],
+    [5, 4, 2, 1],
     1
   );
 
@@ -135,13 +134,18 @@ const Masonry: React.FC<MasonryProps> = ({
     return items.map(child => {
       const col = colHeights.indexOf(Math.min(...colHeights));
       const x = col * (columnWidth + gap);
-      const height = child.height / 2;
+      const height = columns === 1 ? 600 : child.height / 2;
       const y = colHeights[col];
 
       colHeights[col] += height + gap;
       return { ...child, x, y, w: columnWidth, h: height };
     });
   }, [columns, items, width]);
+
+  const containerHeight = useMemo(() => {
+    if (grid.length === 0) return 0;
+    return Math.max(...grid.map(item => item.y + item.h)) + 16;
+  }, [grid]);
 
   const hasMounted = useRef(false);
 
@@ -215,14 +219,13 @@ const Masonry: React.FC<MasonryProps> = ({
   };
 
   return (
-    <div ref={containerRef} className="relative w-full h-full">
+    <div ref={containerRef} className="relative w-full" style={{ height: `${containerHeight}px` }}>
       {grid.map(item => (
         <div
           key={item.id}
           data-key={item.id}
           className="absolute box-content"
           style={{ willChange: 'transform, width, height, opacity' }}
-          onClick={() => window.open(item.url, '_blank', 'noopener')}
           onMouseEnter={e => handleMouseEnter(item.id, e.currentTarget)}
           onMouseLeave={e => handleMouseLeave(item.id, e.currentTarget)}
         >
