@@ -8,7 +8,7 @@ const LandingPage = () => {
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
           Truhlářství Gryč
         </h1>
-        <p className="text-lg max-w-xl md:text-xl text-gray-100 mb-8 font-light">
+        <p className="text-lg max-w-xl md:text-xl text-gray-50 mb-8 font-light">
           Kvalitní truhlářské služby s dvacetiletou tradicí. Od rekonstrukcí po zakázkový nábytek.
         </p>
       </div>

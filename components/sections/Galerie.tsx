@@ -2,9 +2,9 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Masonry, { MasonryItem } from "../react-bits/Masonry"
+import SectionTitle from '../layout/SectionTitle';
 
-//Dummy images
-const items: MasonryItem[] = [
+export const images: MasonryItem[] = [
   { height: 900, id: "kuchyne_1", img:"/kuchyne_1.jpeg" },
   { height: 1200, id: "kuchyne_2", img:"/kuchyne_2.jpeg" },
   { height: 700, id: "kuchyne_3", img:"/kuchyne_3.jpeg" },
@@ -49,15 +49,12 @@ const Galerie = () => {
     >
       <div className="relative p-4 sm:p-8 md:p-20 z-10">
         {/* Header */}
-        <div className="mb-16">
-          <h1 className="section-header">Galerie</h1>
-          <div className="header-underline" />
-        </div>
+        <SectionTitle title="Galerie" />
 
         {shouldAnimate && (
           <div className="relative w-full">
             <Masonry
-              items={items}
+              items={images}
               ease="back.out"
               duration={0.6}
               stagger={0.05}

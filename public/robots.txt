@@ -1,0 +1,21 @@
+# Allow all crawlers to index the site
+User-agent: *
+Allow: /
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+
+# Disallow crawling of private paths (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.reol-ct.cz/sitemap.xml
+
+# Crawl delay (optional - tells crawlers to wait between requests)
+Crawl-delay: 1
