@@ -66,6 +66,7 @@ const Kontakt = () => {
                 width="100%" 
                 height="100%" 
                 loading="lazy"
+                title="Mapa s umístěním Stolařství Gryč v Českém Těšíně"
               />
             </div>
           </div>
