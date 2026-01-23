@@ -46,12 +46,12 @@
   --radius-4xl: calc(var(--radius) + 16px);
 }
 
-`@media` (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
   }
 }
-`@media` (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
