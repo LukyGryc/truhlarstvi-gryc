@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
@@ -100,11 +101,13 @@ export default function RootLayout({
           }}
         />
       </head>
+
       <body
         className={`${workSans.variable} antialiased`}
       >
         <Navbar />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
