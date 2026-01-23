@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Contacts from '../layout/Contacts';
 import SectionTitle from '../layout/SectionTitle';
 import { ContactItem } from '@/types/layout';
@@ -40,11 +41,21 @@ const ContactItems: ContactItem[] = [
 const Kontakt = () => {
 
   return (
-    <section id="kontakt" className="relative bg-[url(/wooden-texture.jpg)] bg-cover bg-center min-h-200 text-white">
+    <section id="kontakt" className="relative min-h-200 text-white">
+      <Image
+        src="/wooden-texture.jpg"
+        alt="Dřevěná textura pozadí"
+        fill
+        className="object-cover"
+        quality={75}
+        priority={false}
+        sizes="100vw"
+      />
+
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/70 to-transparent z-10" />
       
-      <div className="relative z-10 p-4 sm:p-8 md:p-20">
+      <div className="relative z-20 p-4 sm:p-8 md:p-20">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <SectionTitle title="Kontakt" />
