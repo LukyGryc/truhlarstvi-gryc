@@ -30,7 +30,7 @@ const StatValue: React.FC<StatValueProps> = ({ value, type }) => {
     const [displayValue, setDisplayValue] = useState(0)
     const count = useMotionValue(0)
     const ref = useRef<HTMLDivElement>(null)
-    const isInView = useInView(ref, { once: true, amount: 0.5 })
+    const isInView = useInView(ref, { once: true, amount: 0.2 })
 
     useEffect(() => {
         if (isInView) {

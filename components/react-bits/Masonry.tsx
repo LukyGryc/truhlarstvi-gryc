@@ -95,6 +95,11 @@ const Masonry: React.FC<MasonryProps> = ({
     const containerRect = containerRef.current?.getBoundingClientRect();
     if (!containerRect) return { x: item.x, y: item.y };
 
+    //Prevents weird behavior on mobile when only one column is shown 
+    if(columns === 1){
+      return { x: 0, y: 0};
+    }
+
     let direction = animateFrom;
     if (animateFrom === 'random') {
       const dirs = ['top', 'bottom', 'left', 'right'];
