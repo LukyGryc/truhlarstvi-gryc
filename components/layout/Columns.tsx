@@ -12,7 +12,7 @@ const Columns: React.FC<Props> = ({ columns }): JSX.Element => (
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.2 }}
         className="grid mb-10 md:grid-cols-2 gap-12 md:gap-16"
     >
         {
