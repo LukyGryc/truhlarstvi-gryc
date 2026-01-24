@@ -29,7 +29,14 @@ const Navbar = () => {
         }
       </nav>
 
-      <Menu className="md:hidden cursor-pointer" onClick={() => { setIsMenuOpen(true) }} size={28} />
+      <button
+        type="button"
+        className="md:hidden inline-flex items-center justify-center rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        aria-label="Open navigation menu"
+        onClick={() => setIsMenuOpen(true)}
+      >
+        <Menu size={28} aria-hidden="true" />
+      </button>
       {isMenuOpen && (
         <NavDrawer isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} isHomePage={isHomePage} />
       )}
