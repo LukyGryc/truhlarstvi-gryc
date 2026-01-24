@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 z-50 flex justify-between w-full px-4 md:px-12 lg:px-60 py-3 md:py-4 bg-white/30 text-black backdrop-blur-md items-center">
       <h1 className="scroll-m-20 text-2xl font-semibold">
-        <a href={getHref("#landingPage", isHomePage)} className="focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded">
+        <a href={getHref("#landingPage", isHomePage)} className="focus:outline-none focus:ring-2 focus:ring-black-500 focus:ring-offset-2 rounded">
           <span>Truhlářství Gryč</span>
         </a>
       </h1>
@@ -31,7 +31,7 @@ const Navbar = () => {
 
       <button
         type="button"
-        className="md:hidden inline-flex items-center justify-center rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        className="md:hidden cursor-pointer inline-flex items-center justify-center rounded focus:outline-none focus:ring-2 focus:ring-black-500 focus:ring-offset-2"
         aria-label="Open navigation menu"
         onClick={() => setIsMenuOpen(true)}
       >

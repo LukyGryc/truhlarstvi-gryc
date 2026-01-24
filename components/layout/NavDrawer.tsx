@@ -22,14 +22,14 @@ const NavDrawer: React.FC<IProps> = ({ isOpen, setIsOpen, isHomePage }) => {
 
   return (
     <Drawer direction="right" open={isOpen} onClose={handleClose}>
-      <DrawerContent>
+      <DrawerContent className="overflow-y-auto">
         <DrawerHeader className="grid justify-items-end">
             <DrawerTitle className="sr-only">Navigation Menu</DrawerTitle>
             <button
               type="button"
               aria-label="Close navigation menu"
               onClick={handleClose}
-              className="p-1 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="p-1 rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-black-500 focus:ring-offset-2"
             >
               <SquareX aria-hidden="true" />
             </button>
