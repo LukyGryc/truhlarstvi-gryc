@@ -41,7 +41,7 @@ const ContactItems: ContactItem[] = [
 const Kontakt = () => {
 
   return (
-    <section id="kontakt" className="relative min-h-200 text-white">
+    <section id="kontakt" className="relative min-h-200 text-white scroll-mt-10">
       <Image
         src="/wooden-texture.jpg"
         alt=""
