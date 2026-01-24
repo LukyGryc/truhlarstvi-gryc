@@ -5,18 +5,20 @@ import {
   DrawerTitle
 } from "@/components/ui/drawer"
 import { NavigationLinks } from "@/constants/navigationConstants"
+import { getHref } from "@/util/linkUtil"
 import { SquareX } from "lucide-react"
 
 interface IProps {
     isOpen: boolean,
-    setIsOpen: (isOpen: boolean) => void
+    setIsOpen: (isOpen: boolean) => void,
+    isHomePage: boolean
 }
 
-const NavDrawer: React.FC<IProps> = ({ isOpen, setIsOpen }) => {
+const NavDrawer: React.FC<IProps> = ({ isOpen, setIsOpen, isHomePage }) => {
 
-    const handleClose = () => {
-        setIsOpen(false)
-    }
+  const handleClose = () => {
+      setIsOpen(false)
+  }
 
   return (
     <Drawer direction="right" open={isOpen} onClose={handleClose}>
@@ -28,7 +30,7 @@ const NavDrawer: React.FC<IProps> = ({ isOpen, setIsOpen }) => {
         {
             NavigationLinks.map(({ id, href, label }) => (
                 <div key={id} onClick={handleClose} className="px-6 py-4 border-b border-gray-200">
-                    <a href={href} className="text-lg font-medium text-gray-900 hover:text-blue-500">{label}</a>
+                    <a href={getHref(href, isHomePage)} className="text-lg font-medium text-gray-900 hover:text-blue-500">{label}</a>
                 </div>
             ))
         }
