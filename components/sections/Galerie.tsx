@@ -45,7 +45,7 @@ const Galerie = () => {
     <section
       ref={sectionRef}
       id="galerie"
-      className="relative bg-gradient-to-b from-neutral-900 via-neutral-850 to-black min-h-screen overflow-hidden"
+      className="relative bg-gradient-to-b from-neutral-900 via-neutral-850 to-black scroll-mt-10"
     >
       <div className="relative p-4 sm:p-8 md:p-20 z-10">
         {/* Header */}
