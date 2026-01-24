@@ -25,7 +25,14 @@ const NavDrawer: React.FC<IProps> = ({ isOpen, setIsOpen, isHomePage }) => {
       <DrawerContent>
         <DrawerHeader className="grid justify-items-end">
             <DrawerTitle className="sr-only">Navigation Menu</DrawerTitle>
-            <SquareX onClick={handleClose}/>
+            <button
+              type="button"
+              aria-label="Close navigation menu"
+              onClick={handleClose}
+              className="p-1 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            >
+              <SquareX aria-hidden="true" />
+            </button>
         </DrawerHeader>
         {
             NavigationLinks.map(({ id, href, label }) => (
